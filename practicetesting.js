@@ -15,3 +15,8 @@ module.exports.getcurrencies=function(){
 module.exports.getproduct=function(id){
    return {productid:id,price:10}
 }
+
+module.exports.User=function(username){
+if(!username){throw new Error('invalid user')};
+return {id:new Date().getTime(),username:username}
+}

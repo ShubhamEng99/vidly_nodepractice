@@ -39,3 +39,16 @@ describe('getproduct',()=>{
         expect(res).toMatchObject({productid:1})// in case of maatch object we don;t have to list down all the properties
     })
 })
+
+describe('user',()=>{
+    it('should throw if user is falsy',()=>{
+       const args=[NaN,null,undefined,'',0];
+       args.forEach(el=>{
+        expect(()=>{tests.User(el)}).toThrow()
+       })
+    })
+    it('should give valid user object if valid usrname is passed',()=>{
+        const res=tests.User('shubham');
+        expect(res).toMatchObject({username:'shubham'})
+    })
+})
