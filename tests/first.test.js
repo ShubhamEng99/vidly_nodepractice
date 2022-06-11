@@ -13,3 +13,11 @@ describe('absolute-function test',()=>{
         expect(res).toBe(0);
     })
 })
+
+
+describe('greet',()=>{
+    it('should return greeting message',()=>{
+        const res=tests.greet('Shubham');
+        expect(res).toContain('Shubham')
+    })
+})
