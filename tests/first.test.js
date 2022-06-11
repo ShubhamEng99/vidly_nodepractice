@@ -21,3 +21,12 @@ describe('greet',()=>{
         expect(res).toContain('Shubham')
     })
 })
+
+describe('getcurrencies',()=>{
+    it('should return currencies supported',()=>{
+        const res=tests.getcurrencies();
+        expect(res).toBeDefined();
+        expect(res).not.toBeNull();
+        expect(res).toEqual(expect.arrayContaining(['EUR','USD','AUD']))
+    })
+})
