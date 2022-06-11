@@ -30,3 +30,12 @@ describe('getcurrencies',()=>{
         expect(res).toEqual(expect.arrayContaining(['EUR','USD','AUD']))
     })
 })
+
+describe('getproduct',()=>{
+    it('should return product with given id',()=>{
+        const res=tests.getproduct(1);
+        //in case of object don't use toBe as both objects are on different memory location else use toEqual
+        expect(res).toEqual({productid:1,price:10})
+        expect(res).toMatchObject({productid:1})// in case of maatch object we don;t have to list down all the properties
+    })
+})

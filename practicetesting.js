@@ -11,3 +11,7 @@ module.exports.greet=function(str){
 module.exports.getcurrencies=function(){
     return ['USD','AUD','EUR']
 }
+
+module.exports.getproduct=function(id){
+   return {productid:id,price:10}
+}
